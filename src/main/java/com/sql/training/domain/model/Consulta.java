@@ -3,30 +3,28 @@ package com.sql.training.domain.model;
 import com.sql.training.infraestructure.adapter.out.persistence.entity.MotorBDEntity;
 import com.sql.training.infraestructure.adapter.out.persistence.entity.TipoConsultaEntity;
 import com.sql.training.infraestructure.adapter.out.persistence.entity.UsuarioEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 
-@AllArgsConstructor
-@Getter
-@Setter
+@Getter @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Consulta {
 
 
 
-    private Long id;
+
 
 
     TipoConsultaEntity tipoConsulta;
 
 
-    MotorBDEntity motorBDEntity;
+    MotorBDEntity motorBD;
 
 
-    List<UsuarioEntity> usuarioEntities;
+    List<UsuarioEntity> usuarios;
 }

@@ -1,6 +1,7 @@
 package com.sql.training.infraestructure.adapter.out.persistence.entity;
 
 import com.sql.training.application.port.out.ConsultaRepositoryPort;
+import com.sql.training.domain.model.Consulta;
 import com.sql.training.infraestructure.adapter.out.persistence.SpringDataConsultaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -13,7 +14,7 @@ public class JpaConsultaRepositoryAdapter implements ConsultaRepositoryPort {
    private final SpringDataConsultaRepository springDataConsultaRepository;
 
     @Override
-    public ConsultaEntity guardar(ConsultaEntity consultaEntity) {
+    public Consulta guardar(Consulta consulta) {
         return null;
     }
 }

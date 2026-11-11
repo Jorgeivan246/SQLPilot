@@ -4,6 +4,7 @@ package com.sql.training.infraestructure.adapter.in.rest;
 import com.sql.training.application.port.in.CrearConsulta;
 import com.sql.training.domain.model.Consulta;
 import com.sql.training.infraestructure.adapter.in.rest.dto.ConsultaRequest;
+import com.sql.training.infraestructure.adapter.in.rest.dto.ConsultaResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +32,7 @@ public class ConsultaController {
 
         Consulta saved =  CrearConsulta.crear(consulta);
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(null);
+        return ResponseEntity.status(HttpStatus.CREATED).body(ConsultaResponse.from(saved));
     }
 
 }

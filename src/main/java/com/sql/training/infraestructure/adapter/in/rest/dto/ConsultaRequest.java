@@ -15,10 +15,10 @@ import java.util.List;
 @Setter
 public class ConsultaRequest {
 
-    TipoConsultaEntity tipoConsulta;
+    private TipoConsultaEntity tipoConsulta;
 
-    MotorBDEntity motorBD;
+    private MotorBDEntity motorBD;
 
 
-    List<UsuarioEntity> usuario;
+    private List<UsuarioEntity> usuario;
 }
